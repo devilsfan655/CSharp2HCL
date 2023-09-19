@@ -1,7 +1,8 @@
+
+namespace CSharp2HCL.Parameters;
 public abstract class Parameter
 {
     public string Name { get; private set; }
-
     public Parameter(string name)
     {
         Name = name;
@@ -25,7 +26,7 @@ public class IntParameter : Parameter
     }
 }
 
-public class StringParameter : Parameter
+public class StringParameter : Parameter 
 {
     public string Value { get; private set; }
 

@@ -1,3 +1,5 @@
+
+using CSharp2HCL.Parameters;
 public class ResourceBlock
 {
     private string _name;

@@ -1,25 +1,19 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using CSharp2HCL.Parameters;
 class Program
 {
     static void Main(string[] args)
     {
-        var intParameter = new IntParameter("InstaceNumber", 5);
-        var stringParameter = new StringParameter("management_group_id", "root/okay/what/is/this");
-        var listOfStringsParameter = new ListOfStringsParameter("endpoints", new List<string>()
-        {
-            "hey",
-            "how",
-            "are",
-            "you"
-        });
 
-        List<Parameter> test = new List<Parameter>() { intParameter, stringParameter, listOfStringsParameter };
-
-        foreach (Parameter parameter in test)
-        {
-            Console.WriteLine(parameter.GetParameterToHclString());
-        }
+        Parameters parameters = new Parameters();
         
+        parameters.AddParameter("name", "F1231A3315CA23");
+        parameters.AddParameter("display_name", "test-policy-global");
+        parameters.AddParameter("number_of_instances", 5);
+        parameters.AddParameter("available_ips", new List<string>(){"192.168.0.1", "192.168.1.1", "172.27.0.1"});
+        parameters.GetNormalizedParameters(toConsole: true);
+
     }
 }
+
