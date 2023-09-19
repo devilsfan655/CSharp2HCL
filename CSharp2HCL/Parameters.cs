@@ -1,6 +1,5 @@
 using System.Reflection;
 namespace CSharp2HCL.Parameters;
-
 public class Parameters
 {
     private readonly List<Parameter> _parameters;
@@ -97,5 +96,23 @@ public class Parameters
             
             Console.WriteLine(hclFormattedParameter);
         }
+    }
+
+    public List<string> GetNormalizedParameters()
+    {
+        List<string> parameters = new List<string>();
+
+        int maxParameterNameLength = HclFormatter.GetMaxLength(_parameters);
+
+        foreach (Parameter parameter in _parameters)
+        {
+            string hclFormattedParameter = 
+                HclFormatter.GetNormalizedString(parameter.GetParameterToHclString(), maxParameterNameLength) + "\n";
+            
+            parameters.Add(hclFormattedParameter);
+        }
+
+        return parameters;
+
     }
 }

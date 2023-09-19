@@ -12,7 +12,9 @@ class Program
         parameters.AddParameter("display_name", "test-policy-global");
         parameters.AddParameter("number_of_instances", 5);
         parameters.AddParameter("available_ips", new List<string>(){"192.168.0.1", "192.168.1.1", "172.27.0.1"});
-        parameters.GetNormalizedParameters(toConsole: true);
+
+        ResourceBlock azureVirtualMachine = new ResourceBlock("azurerm", "virtual_machine", "vm1", parameters);
+        
 
     }
 }
