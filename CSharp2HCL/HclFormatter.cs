@@ -1,4 +1,3 @@
-
 using CSharp2HCL.Parameters;
 
 namespace CSharp2HCL;

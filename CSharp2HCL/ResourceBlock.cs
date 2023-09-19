@@ -1,10 +1,34 @@
 
+using System.Security.AccessControl;
+using System.Security.Cryptography;
 using CSharp2HCL.Parameters;
 
 public abstract class Block
 {
     public List<Block> Blocks { get; private set; }
     public Parameters Parameters { get; private set; }
+
+    public string _indentModifier = "  "; 
+
+    public int Indent
+    {
+        get
+        {
+            return _indentModifier.Length;
+        }
+        set
+        {
+            if (value >= 0)
+            {
+                _indentModifier = new string(' ', value);
+            }
+            else
+            {
+                
+                throw new ArgumentException("Indent value must be non-negative.");
+            }
+        }
+    }
     
     public Block(List<Block> blocks)
     {
@@ -12,7 +36,7 @@ public abstract class Block
         Parameters = new Parameters();
     }
     
-    public Block(Parameters parameters )
+    public Block(Parameters parameters)
     {
         Parameters = parameters;
         Blocks = new List<Block>();
@@ -23,8 +47,63 @@ public abstract class Block
         Parameters = new Parameters();
         Blocks = new List<Block>();
     }
+    public void AddParameter(string name,  string value)
+    {
+        StringParameter parameter = new StringParameter(name, value);
+        
+        string parameterName = parameter.Name;
+        
+        if (!Parameters.GetParameterNames().Contains(parameterName))
+        {
+            Parameters._parameters.Add(parameter);
+        }
+        else
+        {
+            throw new InvalidOperationException($"Cannot add {parameter.Name}. The property has already been declared ");
+        }
+    }
+    
+    public void AddParameter(string name,  int value)
+    {
+        IntParameter parameter = new IntParameter(name, value);
+        
+        string parameterName = parameter.Name;
+        
+        if (!Parameters.GetParameterNames().Contains(parameterName))
+        {
+            Parameters._parameters.Add(parameter);
+        }
+        else
+        {
+            throw new InvalidOperationException($"Cannot add {parameter.Name}. The property has already been declared ");
+        }
+    }
+    
+    public void AddParameter(string name,  List<string> value)
+    {
+        ListOfStringsParameter parameter = new ListOfStringsParameter(name, value);
+        
+        string parameterName = parameter.Name;
+        
+        if (!Parameters.GetParameterNames().Contains(parameterName))
+        {
+            Parameters._parameters.Add(parameter);
+        }
+        else
+        {
+            throw new InvalidOperationException($"Cannot add {parameter.Name}. The property has already been declared ");
+        }
+    }
+}
 
-    public abstract List<string> GetBlock();
+public class GenericBlock : Block
+{
+    public string Name { get; private set; }
+
+    public GenericBlock(string name)
+    {
+        Name = name;
+    }
 }
 
 public class ResourceBlock : Block
@@ -32,6 +111,7 @@ public class ResourceBlock : Block
     public string Provider { get; private set; }
     public string ResourceType { get; private set; }
     public string ResourceName { get; private set; }
+
 
     public ResourceBlock(string provider, string resourceType, string resourceName)
     {
@@ -56,20 +136,9 @@ public class ResourceBlock : Block
         ResourceName = resourceName;
     }
 
-    public override List<string> GetBlock()
+    public void AddGenericBlock(GenericBlock block)
     {
-        List<string> block = new List<string>() { $"resource {Provider}_{ResourceType} {ResourceName} {{ \n" };
-
-        List<string> resourceParameters = this.Parameters.GetNormalizedParameters();
-
-        foreach (string parameter in resourceParameters)
-        {
-            block.Add(parameter);
-        }
-
-        block.Add("} \n");
-
-        return block;
+        
+        Blocks.Add(block);
     }
-    
 }
