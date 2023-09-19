@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/andrewspence/Documents/RiderProjects/Json2HCL/CSharp2HCL/CSharp2HCL.csproj",
+      "projectUniqueName": "/Users/andrewspence/Documents/Source/CSharp2HCL/CSharp2HCL/CSharp2HCL.csproj",
       "projectName": "CSharp2HCL",
-      "projectPath": "/Users/andrewspence/Documents/RiderProjects/Json2HCL/CSharp2HCL/CSharp2HCL.csproj",
+      "projectPath": "/Users/andrewspence/Documents/Source/CSharp2HCL/CSharp2HCL/CSharp2HCL.csproj",
       "packagesPath": "/Users/andrewspence/.nuget/packages/",
-      "outputPath": "/Users/andrewspence/Documents/RiderProjects/Json2HCL/CSharp2HCL/obj/",
+      "outputPath": "/Users/andrewspence/Documents/Source/CSharp2HCL/CSharp2HCL/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/andrewspence/.nuget/NuGet/NuGet.Config"

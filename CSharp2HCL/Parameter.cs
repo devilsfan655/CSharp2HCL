@@ -4,7 +4,7 @@ public abstract class Parameter
 
     public Parameter(string name)
     {
-        this.Name = name;
+        Name = name;
     }
 
     public abstract string GetParameterToHclString();
@@ -16,12 +16,12 @@ public class IntParameter : Parameter
 
     public IntParameter(string name, int value) : base(name)
     {
-        this.Value = value;
+        Value = value;
     }
 
     public override string GetParameterToHclString()
     {
-        return $"{this.Name} = {this.Value}";
+        return $"{Name} = {Value}";
     }
 }
 
@@ -36,7 +36,7 @@ public class StringParameter : Parameter
     
     public override string GetParameterToHclString()
     {
-        return $"{this.Name} = \"{this.Value}\"";
+        return $"{Name} = \"{Value}\"";
     }
 }
 
@@ -67,7 +67,7 @@ public class ListOfStringsParameter : Parameter
             interationCount++;
         }
         
-        return $"{this.Name} = [{listOfStrings}]";
+        return $"{Name} = [{listOfStrings}]";
     }
 }
 

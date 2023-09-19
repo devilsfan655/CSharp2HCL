@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wHDQiXsXcrHoioRLjtr0cKM1+BX4ocjEEkA56T2tR/0IoBk+Q5XMPKFo+upkbUEFYoHGBGc9QAdph2uLELrOvA==",
+  "dgSpecHash": "dfLIVRFVNxQMTNyl6jXQRmmLf5gK4verM8EdN3AqAh6PJiuLk9AuMEA2D9p60JpJsUZcRyc36toE5bFsWsf7Sw==",
   "success": true,
-  "projectFilePath": "/Users/andrewspence/Documents/RiderProjects/Json2HCL/CSharp2HCL/CSharp2HCL.csproj",
+  "projectFilePath": "/Users/andrewspence/Documents/Source/CSharp2HCL/CSharp2HCL/CSharp2HCL.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
