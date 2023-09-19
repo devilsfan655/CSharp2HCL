@@ -1,0 +1,15 @@
+/Users/andrewspence/Documents/RiderProjects/Json2HCL/Json2HCL/bin/Debug/net6.0/Json2HCL
+/Users/andrewspence/Documents/RiderProjects/Json2HCL/Json2HCL/bin/Debug/net6.0/Json2HCL.deps.json
+/Users/andrewspence/Documents/RiderProjects/Json2HCL/Json2HCL/bin/Debug/net6.0/Json2HCL.runtimeconfig.json
+/Users/andrewspence/Documents/RiderProjects/Json2HCL/Json2HCL/bin/Debug/net6.0/Json2HCL.dll
+/Users/andrewspence/Documents/RiderProjects/Json2HCL/Json2HCL/bin/Debug/net6.0/Json2HCL.pdb
+/Users/andrewspence/Documents/RiderProjects/Json2HCL/Json2HCL/obj/Debug/net6.0/Json2HCL.csproj.AssemblyReference.cache
+/Users/andrewspence/Documents/RiderProjects/Json2HCL/Json2HCL/obj/Debug/net6.0/Json2HCL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/andrewspence/Documents/RiderProjects/Json2HCL/Json2HCL/obj/Debug/net6.0/Json2HCL.AssemblyInfoInputs.cache
+/Users/andrewspence/Documents/RiderProjects/Json2HCL/Json2HCL/obj/Debug/net6.0/Json2HCL.AssemblyInfo.cs
+/Users/andrewspence/Documents/RiderProjects/Json2HCL/Json2HCL/obj/Debug/net6.0/Json2HCL.csproj.CoreCompileInputs.cache
+/Users/andrewspence/Documents/RiderProjects/Json2HCL/Json2HCL/obj/Debug/net6.0/Json2HCL.dll
+/Users/andrewspence/Documents/RiderProjects/Json2HCL/Json2HCL/obj/Debug/net6.0/refint/Json2HCL.dll
+/Users/andrewspence/Documents/RiderProjects/Json2HCL/Json2HCL/obj/Debug/net6.0/Json2HCL.pdb
+/Users/andrewspence/Documents/RiderProjects/Json2HCL/Json2HCL/obj/Debug/net6.0/Json2HCL.genruntimeconfig.cache
+/Users/andrewspence/Documents/RiderProjects/Json2HCL/Json2HCL/obj/Debug/net6.0/ref/Json2HCL.dll
